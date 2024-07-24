@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new item</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #290a0a url('https://i.pinimg.com/736x/56/d6/df/56d6df45ae3b12b895e11cea27f98d62.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction:  column;
+            align-items: center;
+            min-height: 100vh;
+            
+        }
+
+        h1 {
+            text-align: center;
+            color: #f6f9fa;
+            margin-top: 50px;
+            padding: 15px 20px;
+            background-color: #0b4f93;
+            border-radius: 25px; 
+            box-shadow: 0 0 10px rgba(7, 46, 25, 0.925);
+        }
+
+        form {
+            background-color: rgba(0, 0, 0, 0); 
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(56, 45, 216, 0.925);
+            width: 400px;
+            margin-top: 50px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #f3f3f3;
+
+        }
+
+        input[type="text"], textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #231678a3;
+            border-radius: 100px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #010912;
+            color: #337ac2d1;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s; /* Add transition for smooth hover effect */
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #337ac2d1; /* Darker color on hover */
+            color: #e9ecee; /* Text color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Create a new item</h1>
+    <form action="/" method="post">
+        <label for="BlogName">Blog Name</label>
+        <input type="text" name="BlogName" placeholder="Enter name" required>
+        <br><br>
+        <label for="BlogDetails">Blog Details</label>
+        <textarea name="BlogDetails" placeholder="Enter details" required></textarea>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

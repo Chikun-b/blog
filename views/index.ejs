@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projrct</title>
+    <link rel="stylesheet" href="/public/style.css">
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.pinimg.com/736x/a8/70/1f/a8701f342148e48a9f2855f4e377ff9f.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 30px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        
+
+        h1 {
+            text-align: center;
+            color: #05010ab1;
+            margin-top: 30px;
+            font-size: 40px;
+            text-decoration: underline;
+            text-decoration: solid ;
+            
+        }
+
+        form {
+            background-color: #2e307900;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgb(21, 4, 18);
+            width: 300px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background-color: #16055eef;
+            color: rgb(241, 240, 241);
+            border: none;
+            border-radius: 100px;
+            font-weight: bolder;
+            cursor: pointer;
+            font-size: large;
+        }
+
+        button:hover {
+            background-color: #0c0770;
+        }
+
+        ol {
+            list-style-type: none;
+            padding: 0;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .blog-item {
+            background-color: #08002968;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(92, 86, 98, 0.824);
+        }
+
+        .blog-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #bd7714;
+        }
+
+        .blog-details {
+            margin-top: 10px;
+            color: #8d4a2f;
+        }
+    </style>
+</head>
+<body>
+    <form action="/create" method="get">
+        <button type="submit">Create</button>
+    </form>
+    <h1> <i>Iteams</i></h1>
+    <ol>
+        <% for (let item of items) { %>
+            <li class="blog-item">
+                <strong></strong><span class="blog-name"><%= item.BlogName %></span>
+                <p class="blog-details"><%= item.BlogDetails %></p>
+            </li>
+        <% } %>
+    </ol>
+</body>
+</html>
